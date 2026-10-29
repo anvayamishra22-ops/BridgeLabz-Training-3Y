@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS Code -->
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 2px solid black;
+            transition: all 0.3s ease; /* Added for smooth visual transitions */
+        }
+        .active{
+            background-color: red;
+            padding: 30px;
+            margin: 0 auto;
+            border-radius: 30px;
+        }
+        .bg-blue{
+            background-color: blue;
+            padding: 30px;
+            margin: 0 auto;
+            border-radius: 30px;
+        }
+        .bg-green{
+            background-color: green;
+            padding: 30px;
+            margin: 0 auto;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Html Code -->
+    <div class="box"></div>
+    <button id="redBtn">Red</button>
+    <button id="blueBtn">Blue</button>
+    <button id="greenBtn">Green</button>
+
+    <!-- Js Code -->
+    <script>
+        const boxE1 = document.querySelector(".box");
+        const redBtnE1 = document.querySelector("#redBtn");
+        const blueBtnE1 = document.querySelector("#blueBtn");
+        const greenBtnE1 = document.querySelector("#greenBtn");
+
+        function clearBoxClasses() {
+            boxE1.classList.remove("active", "bg-blue", "bg-green");
+        }
+
+        redBtnE1.addEventListener("click", () => {
+            clearBoxClasses();
+            boxE1.classList.add("active");
+        });
+
+        blueBtnE1.addEventListener("click", () => {
+            clearBoxClasses();
+            boxE1.classList.add("bg-blue");
+        });
+
+        greenBtnE1.addEventListener("click", () => {
+            clearBoxClasses();
+            boxE1.classList.add("bg-green");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>DOM Input</h1>
+    <input id="inputName" type="text" placeholder="name">
+    <button id="btn">add</button>
+    <ul id="list">
+    </ul>
+</body>
+
+<script>
+    const inputE1 = document.querySelector("#inputName");
+    const btnE1 = document.querySelector("#btn");
+    const listE1 = document.querySelector("#list");
+    btnE1.addEventListener("click",()=>{
+        let val = inputE1.value;
+        
+        //create li element one way
+        let liE1 = document.createElement("li");
+        liE1.textContent = val;
+        listE1.appendChild(liE1);
+    })
+</script>
+</html>
